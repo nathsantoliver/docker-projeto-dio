@@ -1,0 +1,254 @@
+
+/* CONFIGS */
+/*
+Font size (paragraphs): 15px
+font-family: 'Overpass', sans-serif;
+Font Weight: 400, 700
+*/
+
+:root {
+    /* PRIMARY COLORS */
+    --orange: hsl(25, 97%, 53%);
+
+    /* NEUTRAL COLORS */
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+body {
+    background-color: var(--very-dark-blue);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/**************** CARD ****************/
+.card {
+    background-color: var(--dark-blue);
+    width: 420px;
+    height: 440px;
+    margin: auto;
+    padding: 35px;
+    border-radius: 35px;
+}
+
+/**************** CARD FEEDBACK ****************/
+.card_feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+
+.card_feedback.hidden {
+    display: none;
+}
+
+.star_icon {
+    background-color: rgba(124, 135, 152, 0.247);
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedback_title {
+    color: var(--white);
+    font-size: 27px;
+    font-weight: 700;
+    text-align: left;
+    padding: 15px 0 10px 0;
+}
+
+.feedback_description {
+    color: var(--light-grey);
+    text-align: left;
+    line-height: 1.6;
+}
+
+
+.rating_stars .star-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+
+.rating_stars .star-items .star {
+    background-color: rgba(124, 135, 152, 0.247);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-grey);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+.rating_stars .star-items .star:hover {
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+.rating_stars .star-items .star:active {
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+
+
+.rating_stars .star-items .star.active {
+    background-color: var(--medium-grey);
+    color: var(--white);
+}
+
+.submit {
+    background-color: var(--orange);
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    color: var(--white);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.submit:hover {
+    background-color: var(--white);
+    color: var(--orange);
+    cursor: pointer;
+}
+
+/**************** CARD RESULT ****************/
+.card_result {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px;
+    gap: 20px;
+}
+
+.card_result.hidden {
+    display: none;
+
+}
+
+.result_star {
+    background-color: rgba(124, 135, 152, 0.247);
+    padding: 8px 20px 5px;
+    margin-top: 8px;
+    font-size: 16px;
+    border-radius: 30px;
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result_title {
+    color: var(--white);
+    font-size: 27px;
+    font-weight: 700;
+    padding-top: 20px;
+}
+
+.result_description {
+    color: var(--light-grey);
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* FOOTER */
+.attribution {
+    font-size: 9px;
+    position: absolute;
+    color: var(--white);
+    bottom: 5px;
+    left: 8%;
+    right: 8%;
+}
+
+.attribution a {
+    color: var(--light-red);
+    color: var(--orange);
+}
+
+/* RESPONSIVE */
+@media(max-width: 450px) {
+    /* CARD */
+    .card {
+        width: 340px;
+        height: 360px;
+        margin: 20px;
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    /* CARD FEEDBACK */
+    .star_icon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .feedback_title {
+        font-size: 25px;
+        padding: 10px 0 10px 0;
+    }
+
+    .feedback_description {
+        font-size: 0.9rem;
+    }
+
+    .rating_stars .star-items {
+        padding: 20px 0 25px 0;
+    }
+
+    .rating_stars .star-items .star {
+        width: 45px;
+        height: 45px;  
+    }
+
+
+    /* CARD RESULT */
+    .card_result {
+        padding: 35px 20px;
+        gap: 10px;
+    }
+
+    .result_star {
+        padding: 8px 12px 5px;
+        margin-top: 8px;
+        font-size: 14px;
+    }
+
+    .result_title {
+        font-size: 25px;
+        padding-top: 15px;
+    }
+
+    .result_description {
+        font-size: 0.9rem;
+    }
+
+    /* FOOTER */
+    .attribution {
+        font-size: 7px;
+    }
+}
